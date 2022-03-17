@@ -16,7 +16,17 @@ let goblins = [
 ];
 
 // set event listeners 
-
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const goblinName = data.get('goblin-name');
+    const newGoblin = {
+        name: goblinName,
+        hp: Math.ceil(Math.random() * 10),
+    };
+    goblins.push(newGoblin);
+	
+});
 
   // get user input
   // use user input to update state 
