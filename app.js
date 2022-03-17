@@ -43,17 +43,24 @@ function displayGoblins() {
                     alert('you tried to hit ' + goblin.name + ' but missed!');
                 }
                 if (goblin.hp === 0) {
-                    defeatedGoblinsCount++;
+                    defeatedGoblins++;
                 }
                 if (playerHP === 0) {
                     playerImgEl.classList.add('game-over');
                     alert('GAME OVER!!!');
                 }
+                playerHPEl.textContent = playerHP;
+                defeatCounterEl.textContent = defeatedGoblins;
+
+                displayGoblins();
             });
         }
         goblinsListEl.append(goblinEl);
     }
 }
+
+displayGoblins();
+
 
   // get user input
   // use user input to update state 
