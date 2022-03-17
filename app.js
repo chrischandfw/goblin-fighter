@@ -25,8 +25,19 @@ form.addEventListener('submit', (e) => {
         hp: Math.ceil(Math.random() * 10),
     };
     goblins.push(newGoblin);
-	
+
 });
+
+function displayGoblins() {
+    goblinsListEl.textContent = '';
+
+    for (let goblin of goblins) {
+        const goblinEl = renderGoblin(goblin);
+
+		if ()
+		goblinsListEl.append(goblinEl);
+    }
+}
 
   // get user input
   // use user input to update state 
