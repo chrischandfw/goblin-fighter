@@ -121,3 +121,39 @@ footer {
 	opacity: 0.75;
 }
 
+.goblin-stats {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.goblin-stats input, .goblin-stats button {
+	height: 55px;
+}
+
+.goblin-stats button {
+	font-size: 2em;
+}
+
+.goblin-stats input {
+	font-size: 3rem;
+	width: 80%;
+}
+
+form {
+	padding: 20px;
+	display: flex;
+}
+
+.dead {
+	opacity: 2;
+	cursor: default;
+}
+
+.game-over {
+	transform: rotate(90deg);
+}
+
