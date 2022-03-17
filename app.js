@@ -34,8 +34,24 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-		if ()
-		goblinsListEl.append(goblinEl);
+        if (goblin.hp > 0) {
+            goblinEl.addEventListener('click', () => {
+                if (Math.random() < .33) {
+                    goblin.hp--;
+                    alert('you hit ' + goblin.name);
+                } else {
+                    alert('you tried to hit ' + goblin.name + ' but missed!');
+                }
+                if (goblin.hp === 0) {
+                    defeatedGoblinsCount++;
+                }
+                if (playerHP === 0) {
+                    playerImgEl.classList.add('game-over');
+                    alert('GAME OVER!!!');
+                }
+            });
+        }
+        goblinsListEl.append(goblinEl);
     }
 }
 
