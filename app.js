@@ -27,6 +27,8 @@ form.addEventListener('submit', (event) => {
     };
     goblins.push(newGoblin);
 
+    displayGoblins();
+
 });
 
 function displayGoblins() {
@@ -42,16 +44,16 @@ function displayGoblins() {
                 
                 if (Math.random() < .33) {
                     goblin.hp--;
-                    alert('you hit ' + goblin.name);
+                    alert('Hanuman: Eat this ' + goblin.name + ' !');
                 } else {
-                    alert('you tried to hit ' + goblin.name + ' but missed!');
+                    alert(goblin.name + ' : Hahaha! You missed, you weak fool!');
                 }
 
                 if (Math.random() < .5) {
                     playerHP--;
-                    alert(goblin.name + ' hit you!');
+                    alert(goblin.name + ' : Taste my wrath!');
                 } else {
-                    alert(goblin.name + ' tried to hit you, but missed!');
+                    alert(' Hanuman: Cant catch me!');
                 }
 
                 if (goblin.hp === 0) {
