@@ -35,7 +35,7 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -109,7 +109,7 @@ footer {
 	color: #660000;
     font-size: 5rem;
     font-weight: 900;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: cursive;
     text-align: center;
     padding: 5px;
 }
@@ -131,21 +131,48 @@ footer {
 }
 
 .goblin-stats input, .goblin-stats button {
-	height: 55px;
+	height: 45px;
 }
 
 .goblin-stats button {
-	font-size: 2em;
+	font-size: 1em;
 }
 
 .goblin-stats input {
-	font-size: 3rem;
-	width: 80%;
+	font-size: 2rem;
+	width: 30%;
+}
+
+.defeated-goblins { 
+    text-align: center;
+} 
+
+.defeated-goblins p {
+    font-size: 2rem;
+    color: black;
+    background-color: gold;
+    padding: 20px;
+    border-radius: 15px;
+	opacity: 0.75;
 }
 
 form {
-	padding: 20px;
+	padding: 55px;
 	display: flex;
+}
+
+.goblin {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	justify-self: flex-end;
+	font-size: 2rem;
+}
+
+.goblin img {
+	width: 500px;
 }
 
 .dead {

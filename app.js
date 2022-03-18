@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { renderGoblin } from './render-utils';
+import { renderGoblin } from './render-utils.js';
 
 const defeatCounterEl = document.querySelector('#defeat-counter');
 const playerHPEl = document.querySelector('#player-hp');
@@ -16,12 +16,13 @@ let goblins = [
 ];
 
 // set event listeners 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
     const data = new FormData(form);
-    const goblinName = data.get('goblin-name');
+    //const goblinName = data.get('goblin-name');
     const newGoblin = {
-        name: goblinName,
+        name: data.get('goblin-name'),
         hp: Math.ceil(Math.random() * 10),
     };
     goblins.push(newGoblin);
@@ -33,6 +34,8 @@ function displayGoblins() {
 
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
+
+        goblinsListEl.append(goblinEl);
 
         if (goblin.hp > 0) {
             goblinEl.addEventListener('click', () => {
@@ -50,22 +53,17 @@ function displayGoblins() {
 				
                 if (playerHP === 0) {
                     playerImgEl.classList.add('game-over');
-                    alert('GAME OVER!!!');
+                    alert('GAME OVER!');
                 }
-				
+
                 playerHPEl.textContent = playerHP;
                 defeatCounterEl.textContent = defeatedGoblins;
 
                 displayGoblins();
             });
         }
-        goblinsListEl.append(goblinEl);
+        //goblinsListEl.append(goblinEl);
     }
 }
 
 displayGoblins();
-
-
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state

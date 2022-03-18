@@ -9,16 +9,24 @@ export function renderGoblin(goblinData) {
     nameEl.textContent = goblinData.name;
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
 
-    faceEl.src = goblinData.hp > 0 ? ('./assets/goblinX.png') : ('.assets/fire.png');
+    faceEl.src = goblinData.hp > 0 ? './assets/goblinX.png' : './assets/fire.png';
+   /* if (goblinData.hp > 0) {
+        faceEl.src = './assets/goblinX.png'; 
+    } else {
+        faceEl.src = './assets/fire.png';
+    }*/
 
     if (goblinData.hp < 0) {
         goblinEl.classList.add('dead');
     }
 
-    goblinEl.append(nameEl, faceEl, hpEl);
+    goblinEl.append(faceEl, nameEl, hpEl);
 
     return goblinEl;
 }
 
 //😈
 //🔥
+
+//('./assets/goblinX.png')
+//('.assets/fire.png')
