@@ -40,11 +40,11 @@ function displayGoblins() {
 
         //goblinsListEl.append(goblinEl);
 
-        if (goblin.hp > 0) {
+        if (goblin.hp > 0 && playerHP > 0) {
             goblinEl.addEventListener('click', () => {
 
                 if (playerHP <= 0) {
-                    playerImgEl.classList.add('game-over');
+                    //playerImgEl.classList.add('game-over');
                     alert('GAME OVER. Get Stronger.');
                     return;
                 }
@@ -72,6 +72,10 @@ function displayGoblins() {
 
                 displayGoblins();
             });
+        }
+        if (playerHP === 0) {
+            form.classList.add('hidden');
+            playerImgEl.classList.add('game-over');
         }
         goblinsListEl.append(goblinEl);
     }

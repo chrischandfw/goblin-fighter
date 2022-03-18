@@ -197,3 +197,6 @@ form {
 	transform: rotate(90deg);
 }
 
+.hidden {
+	display: none;
+}
