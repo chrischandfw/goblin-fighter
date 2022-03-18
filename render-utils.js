@@ -26,7 +26,7 @@ export function renderGoblin(goblinData) {
 
     return goblinEl;
 }
-
+//These are my backup emojis in case images don't show.
 //😈
 //🔥
 

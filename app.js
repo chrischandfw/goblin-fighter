@@ -3,13 +3,13 @@ import { renderGoblin } from './render-utils.js';
 
 const defeatCounterEl = document.querySelector('#defeat-counter');
 const playerHPEl = document.querySelector('#player-hp');
-const playerImgEl = document.querySelector('player-img');
+const playerImgEl = document.querySelector('#player-img');
 const form = document.querySelector('form');
 const goblinsListEl = document.querySelector('.goblins');
 
 // let state
 let defeatedGoblins = 0;
-let playerHP = 15;
+let playerHP = 11;
 let goblins = [
     { name: 'Loki', hp: 3, strength: 1 },
     { name: 'Young Thanos', hp: 9, strength: 5 },
@@ -37,14 +37,14 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-        goblinsListEl.append(goblinEl);
+        //goblinsListEl.append(goblinEl);
 
         if (goblin.hp > 0) {
             goblinEl.addEventListener('click', () => {
 
                 if (playerHP <= 0) {
                     playerImgEl.classList.add('game-over');
-                    alert('GAME OVER!');
+                    alert('Get Stronger!');
                     return;
                 }
                 
@@ -64,11 +64,7 @@ function displayGoblins() {
 
                 if (goblin.hp === 0) {
                     defeatedGoblins++;
-                } else if (playerHP <= 0) {
-                    playerImgEl.classList.add('game-over');
-                    alert('GAME OVER!');
-                    return;
-                }
+                } 
 
                 playerHPEl.textContent = playerHP;
                 defeatCounterEl.textContent = defeatedGoblins;
@@ -76,7 +72,7 @@ function displayGoblins() {
                 displayGoblins();
             });
         }
-        //goblinsListEl.append(goblinEl);
+        goblinsListEl.append(goblinEl);
     }
 }
 
