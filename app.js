@@ -74,6 +74,7 @@ function displayGoblins() {
             });
         }
         if (playerHP === 0) {
+            alert('GAME OVER. Get Stronger.');
             form.classList.add('hidden');
             playerImgEl.classList.add('game-over');
         }
