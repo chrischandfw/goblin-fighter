@@ -24,6 +24,7 @@ form.addEventListener('submit', (event) => {
     const newGoblin = {
         name: data.get('goblin-name'),
         hp: Math.ceil(Math.random() * 10),
+        strength: Math.ceil(Math.random() * 5),
     };
     goblins.unshift(newGoblin);
 
@@ -44,7 +45,7 @@ function displayGoblins() {
 
                 if (playerHP <= 0) {
                     playerImgEl.classList.add('game-over');
-                    alert('Get Stronger!');
+                    alert('GAME OVER. Get Stronger.');
                     return;
                 }
                 
