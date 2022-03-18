@@ -11,8 +11,8 @@ const goblinsListEl = document.querySelector('.goblins');
 let defeatedGoblins = 0;
 let playerHP = 75;
 let goblins = [
-    { name: 'Reincarnated Loki', hp: 3 },
-    { name: 'Young Thanos', hp: 9 },
+    { name: 'Loki', hp: 3, strength: 1 },
+    { name: 'Young Thanos', hp: 9, strength: 2 },
 ];
 
 // set event listeners 
@@ -45,6 +45,13 @@ function displayGoblins() {
                     alert('you hit ' + goblin.name);
                 } else {
                     alert('you tried to hit ' + goblin.name + ' but missed!');
+                }
+
+                if (Math.random() < .5) {
+                    playerHP--;
+                    alert(goblin.name + ' hit you!');
+                } else {
+                    alert(goblin.name + ' tried to hit you, but missed!');
                 }
 
                 if (goblin.hp === 0) {
