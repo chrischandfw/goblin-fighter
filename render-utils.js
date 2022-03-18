@@ -6,6 +6,7 @@ export function renderGoblin(goblinData) {
 
     goblinEl.classList.add('goblin');
 
+
     nameEl.textContent = goblinData.name;
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
 
