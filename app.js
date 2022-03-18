@@ -9,10 +9,10 @@ const goblinsListEl = document.querySelector('.goblins');
 
 // let state
 let defeatedGoblins = 0;
-let playerHP = 75;
+let playerHP = 15;
 let goblins = [
     { name: 'Loki', hp: 3, strength: 1 },
-    { name: 'Young Thanos', hp: 9, strength: 2 },
+    { name: 'Young Thanos', hp: 9, strength: 5 },
 ];
 
 // set event listeners 
@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
         name: data.get('goblin-name'),
         hp: Math.ceil(Math.random() * 10),
     };
-    goblins.push(newGoblin);
+    goblins.unshift(newGoblin);
 
     displayGoblins();
 
@@ -41,6 +41,12 @@ function displayGoblins() {
 
         if (goblin.hp > 0) {
             goblinEl.addEventListener('click', () => {
+
+                if (playerHP <= 0) {
+                    playerImgEl.classList.add('game-over');
+                    alert('GAME OVER!');
+                    return;
+                }
                 
                 if (Math.random() < .33) {
                     goblin.hp--;
@@ -58,11 +64,10 @@ function displayGoblins() {
 
                 if (goblin.hp === 0) {
                     defeatedGoblins++;
-                }
-				
-                if (playerHP === 0) {
+                } else if (playerHP <= 0) {
                     playerImgEl.classList.add('game-over');
                     alert('GAME OVER!');
+                    return;
                 }
 
                 playerHPEl.textContent = playerHP;
