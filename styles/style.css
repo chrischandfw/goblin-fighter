@@ -4,7 +4,7 @@ body {
     
     --color1: white;
     --color2: white;
-    --color3: white;
+    --color3: gold;
     --color4: white;
     --color5: white;
     
@@ -28,36 +28,41 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    /*background-color: var(--color2);*/
+	background-image: url(../assets/skybridge.jpg);
+	background-size: cover;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
 }
 
 section {
-    background-color: var(--color5);
-    max-width: 80%;
+    background-color: transparent;
+    max-width: 90%;
+	height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	margin-top: 100px;
+	position: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    /*border: solid 2px var(--color1);*/
 }
 
 header {
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
-    height: var(--header-height);
+    height: 100px;
     box-shadow: var(--shadow);
 }
 
