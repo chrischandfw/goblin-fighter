@@ -174,11 +174,12 @@ form {
 }
 
 .goblin {
-	cursor: crosshair;
+	cursor: url(/assets/sword.png), crosshair;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 21px;
+
 	justify-self: flex-end;
 	font-size: 1.5rem;
 }
