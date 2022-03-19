@@ -46,7 +46,7 @@ main {
 section {
     background-color: transparent;
     max-width: 90%;
-	height: 600px;
+	height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,6 +93,6 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: transparent);
+    background-color: transparent;
     box-shadow: var(--shadow);
 }
