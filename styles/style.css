@@ -29,8 +29,10 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     /*background-color: var(--color2);*/
-	background-image: url(../assets/skybridge.jpg);
+	background-image: url(../assets/palace2.jpg);
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 main {
@@ -55,15 +57,15 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    /*border: solid 2px var(--color1);*/
+    border: solid 2px var(--color3);
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: transparent;
     height: 100px;
-    box-shadow: var(--shadow);
+    /*box-shadow: var(--shadow);*/
 }
 
 
@@ -91,6 +93,6 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: transparent);
     box-shadow: var(--shadow);
 }
