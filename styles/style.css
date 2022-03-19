@@ -33,11 +33,12 @@ body {
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -45,11 +46,13 @@ main {
 
 section {
     background-color: var(--color5);
-    max-width: 80%;
+    max-width: 85%;
+	height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	position: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
@@ -100,7 +103,7 @@ footer {
 }
 
 .player-stats {
-	width: 45%;
+	width: 75%;
 	height: 91%;
 	display: flex;
 	flex-direction: column;
@@ -128,9 +131,9 @@ footer {
 }
 
 .goblin-stats {
-	width: 15%;
+	width: 75%;
 	float: right;
-	display: flex;
+	display: grid;
 	justify-content: center;
 	flex-direction: column;
 	justify-content: space-between;
@@ -149,7 +152,7 @@ footer {
 
 .goblin-stats input {
 	font-size: 1rem;
-	width: 30%;
+	width: 50%;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -170,7 +173,6 @@ footer {
 form {
 	padding: 55px;
 	display: flex;
-	align-content: flex-end;
 }
 
 .goblin {
@@ -179,14 +181,12 @@ form {
 	justify-content: center;
 	align-items: center;
 	margin: 21px;
-
 	justify-self: flex-end;
 	font-size: 1.5rem;
 }
 
 .goblin img {
 	width: 175px;
-
 }
 
 .dead {

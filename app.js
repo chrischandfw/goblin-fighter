@@ -20,7 +20,6 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
-    //const goblinName = data.get('goblin-name');
     const newGoblin = {
         name: data.get('goblin-name'),
         hp: Math.ceil(Math.random() * 10),
