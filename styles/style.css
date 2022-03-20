@@ -34,6 +34,11 @@ header {
     margin-left: 20px;
 }
 
+.gutter-right {
+	margin-right: 20px;
+	float: right;
+}
+
 header img {
     height: var(--header-height);
 }

@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="gutter-left">
-            <p>The villagers around the Kingdom of Sukhothai are complaining about the 
+            <p>The villagers around the Kingdom of Souriya are complaining about the 
 				<br>mysterious creatures that come during the early mornings. They would eat 
 				<br>bulls, goats, and chickens which is affecting the meat market. 
 				<br>The King has sent a reward of One Thousand coins for each head.</p>
@@ -24,21 +24,23 @@
     <main>
         <section class="main-section">
             <div class="fancy-border">
-				<h1>Retainer's Stats</h1>
-				<p>The villagers around the Kingdom of Sukhothai are complaining about the 
-					<br>mysterious creatures that come during the early mornings. They would eat 
-					<br>bulls, goats, and chickens which is affecting the meat market. 
-					<br>The King has sent a reward of One Thousand coins for each head.</p>
+				<h1>Battle Stats</h1>
+					<div class="battle-stats">
+						<p>My lord, you have defeated <span id="defeated-number">0</span> monsters.</p>
+						<div class="defeated-list">
+
+						</div>
+					</div>
 			</div>
         </section>
 
 		<section class="second-section">
 				<div class="dropdown">
-					<select name="api" id="api">
+					<select name="retainers" id="retainers">
 						<option value="none">RETAINERS</option>
 						<option value="hanuman">Hanuman</option>
 						<option value="naresuan">Naresuan</option>
-						<option value="ram">Ramkhamhaeng</option>
+						<option value="ram">Gomin</option>
 						<option value="anothai">Anothai</option>
 						<option value="bounrak">Bounrak</option>
 					</select>
@@ -46,7 +48,7 @@
 					<ul id="list">
 			
 					</ul>
-					<button id="fight-button">Fight</button>
+					<button id="fight-button">FIGHT</button>
 				</div>
 			</div>
         </section>
@@ -54,6 +56,8 @@
 		<section class="third-section">
 			<button id="battle-button">BATTLE</button>
 			</div>
+		</section>
+
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
