@@ -22,13 +22,13 @@ body {
 	text-align: center;
 }
 
-header {
+/*header {
     display: flex;
     justify-content: flex-start;
     background-color: transparent;
     height: 20px;
-    /*box-shadow: var(--shadow);*/
-}
+    /*box-shadow: var(--shadow);
+}*/
 
 .gutter-left {
     margin-left: 20px;

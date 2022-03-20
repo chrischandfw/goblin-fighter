@@ -3,5 +3,5 @@ const defeatedMonsterEl = document.querySelector = ('defeated-number');
 
 let defeatedMonsterCount = 0;
 let retainers = [
-    { name: 'Hanuman', }
+    { name: 'Hanuman', level: 1, }
 ];
