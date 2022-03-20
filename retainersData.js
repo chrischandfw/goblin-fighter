@@ -30,3 +30,4 @@ export const retainers = [
         details: 'Military general from Lan Xang kingdom' 	
     }
 ];
+
