@@ -1,6 +1,6 @@
 export function renderMonster(monsters) {
-    const opponentCardDiv = document.createElement('div');
-    opponentCardDiv.classList.add('opponentCard');
+    const monstersDiv = document.createElement('div');
+    monstersDiv.classList.add('monstersCard');
 
     const opponentInfoDiv = document.createElement('div');
     opponentInfoDiv.classList.add('flex-column', 'flex-start');
@@ -17,7 +17,7 @@ export function renderMonster(monsters) {
     opponentImage.classList.add('smallImg');
 
     opponentInfoDiv.append(opponentName, opponentHealth);
-    opponentCardDiv.append(opponentInfoDiv, opponentImage);
+    monstersDiv.append(opponentInfoDiv, opponentImage);
 
     return opponentCardDiv;
 }

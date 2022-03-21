@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Dispatch4Battle</title>
 </head>
 
 <style>
@@ -34,54 +34,31 @@
 
 <body>
     <main>
-        <section class="main-section">
-			<div class="gutter-left">
-				<p>The villagers around the Kingdom of Souriya are complaining about the 
-					mysterious creatures that come during the early mornings. They would eat 
-					bulls, goats, and chickens which is affecting the meat market. 
-					The King has sent a reward of One Thousand coins for each head.</p>
+        <div class="player-stats">
+			<div class="defeated-goblins">
+				<p>Defeated <span id="defeated-flyingGoblin">0</span> Flying Goblins and <span id="defeated-goblinGhost">0</span> Ghost Goblins.</p>
+				<div class="defeated-list"></div>
 			</div>
-            <div class="fancy-border">
-				<h1>Battle Stats</h1>
-					<div class="battle-stats">
-						<p>My lord, you have defeated <span id="defeated-number">0</span> monsters.</p>
-						<div class="defeated-list">
+			<div class="retainer">
+				<select class="rets-dropdown" name="retainers" id="retainers">
+					<option value="none">RETAINERS</option>
+					<option value="hanuman">Hanuman</option>
+					<option value="naren">Naren</option>
+                    <option value="gomin">Gomin</option>
+                    <option value="anothai">Anothai</option>
+                    <option value="bounrak">Bounrak</option>
+                </select>
 
-						</div>
-					</div>
+				</select>
 			</div>
-        </section>
+		</div>
+		<div class="goblin-stats">
+			<div>
+					<button id="battle-button">Battle</button>
 
-		<section class="second-section">
-				<div class="dropdown">
-					<select class="rets-dropdown" name="retainers" id="retainers">
-						<option value="none">RETAINERS</option>
-						<option value="hanuman">Hanuman</option>
-						<option value="naren">Naren</option>
-						<option value="gomin">Gomin</option>
-						<option value="anothai">Anothai</option>
-						<option value="bounrak">Bounrak</option>
-					</select>
-					<!--<div class="rets-container">
-						<p class="rets-name" id="rets-name"></p>
-						<p class="rets-level" id="rets-level"></p>
-						<p class="rets-strength" id="rets-level"></p>
-						<p class="rets-attack" id="rets-attack"></p>
-						<p class="rets-details" id="rets-details"></p>
-					</div>-->
-					<div id='error-message'></div>
-					<ul id="list">
-			
-					</ul>
-					<button id="fight-button">FIGHT</button>
-				</div>
+				<div class="goblins"></div>
 			</div>
-        </section>
-
-		<section class="third-section">
-			<button id="battle-button">BATTLE</button>
-			</div>
-		</section>
+		</div>
 
     </main>
     <footer>
