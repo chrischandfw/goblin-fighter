@@ -23,17 +23,16 @@ selectEl.addEventListener('change', (e) => {
     } else if (selected === 'hanuman') {
         renderRetainers(0);
     } else if (selected === 'naren') {
-		renderRetainers(1);
-	} else if (selected === 'gomin') {
-		renderRetainers(2);
-	} else if (selected === 'anothai') {
-		renderRetainers(3);
-	} else (selected === 'bounrak') {
-		renderRetainers(4);
-	}
-	
+        renderRetainers(1);
+    } else if (selected === 'gomin') {
+        renderRetainers(2);
+    } else if (selected === 'anothai') {
+        renderRetainers(3);
+    } else {
+        renderRetainers(4);
+    }
 });
 
-function renderRetainers(index) {
+function displayRetainers() {
 	
 }
