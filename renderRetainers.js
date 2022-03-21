@@ -2,29 +2,25 @@ import { retainers } from './retainersData';
 
 export function renderRetainers() {
     const retainersCard = document.createElement('div');
+    const retName = document.createElement('h4');
+    const retLevel = document.createElement('h4');
+    const retsImage = document.createElement('img');
+    const retStrength = document.createElement('h4');
+    const retAttack = document.createElement('h4');
+
     retainersCard.classList.add('playerCard', 'flex-column');
     retainersCard.id = retainers.id;
 
-    const retainerName = document.createElement('h4');
-    retainerName.textContent = retainers.name;
+    retName.textContent = retainers.name;
+    retLevel.textContent = retainers.level;
 
-    const retainerLevel = document.createElement('h4');
-    retainerLevel.textContent = retainers.level;
-
-    const retsImage = document.createElement('img');
     retsImage.src = `assets/${retainers.name}-rets.png`;
     retsImage.classList.add('selectRetsImage');
 
-    const retainerStrength = document.createElement('h4');
-    retainerStrength.textContent = retainers.strength;
+    retStrength.textContent = retainers.strength;
+    retAttack.textContent = retainers.attack;
 
-    const retainerAttack = document.createElement('h4');
-    retainerAttack.textContent = retainers.attack;
-
-    retainersCard.append(retainerName, retainerLevel, retsImage, retainerStrength, retainerAttack);
-
-    retainersCard.addEventListener('mouseover', function(){retainersCard.classList.add('button-hover');});
-    retainersCard.addEventListener('mouseout', function(){retainersCard.classList.remove('button-hover');});
+    retainersCard.append(retName, retLevel, retsImage, retStrength, retAttack);
 
     return retainersCard;
 }
