@@ -3,7 +3,7 @@ body {
     /* feel free to update these css variables for a quick theme */
     
     --color1: white;
-    --color2: white;
+    --color2: brown;
     --color3: white;
     --color4: white;
     --color5: white;
@@ -29,18 +29,38 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+	background-image: url('../assets/skybridge.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 main {
+    /*display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));*/
+	height: 100%;
+	display: flex;
+}
+
+section {
+    /*background-color: var(--color5);
+    max-width: 85%;
+	height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
-}
-
-section {
-    background-color: var(--color5);
+	position: center;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    border: solid 2px var(--color1);*/
+	background-color: var(--color5);
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -59,6 +79,7 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+	position: sticky;
 }
 
 
@@ -78,7 +99,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +109,108 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.player img {
+	width: 275px;
+}
+
+.player-stats {
+	width: 75%;
+	height: 91%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	float: left;
+}
+
+.player {
+	color: #660000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+	float: left;
+}
+
+.player p {
+	background-color: gold;
+	border-radius: 15px;
+	padding: 5px;
+	opacity: 0.75;
+	flex-direction: column;
+	float: left;
+}
+
+.goblin-stats {
+	width: 75%;
+	float: right;
+	display: grid;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.goblin-stats input, .goblin-stats button {
+	height: 35px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.goblin-stats button {
+	font-size: 1em;
+	color: #660000;
+}
+
+.goblin-stats input {
+	font-size: 1rem;
+	width: 50%;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.defeated-goblins { 
+    text-align: center;
+} 
+
+.defeated-goblins p {
+    font-size: 1rem;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    background-color: gold;
+    padding: 5px;
+    border-radius: 15px;
+	opacity: 0.75;
+}
+
+form {
+	padding: 55px;
+	display: flex;
+}
+
+.goblin {
+	cursor: url(/assets/sword.png), crosshair;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 21px;
+	justify-self: flex-end;
+	font-size: 1.5rem;
+}
+
+.goblin img {
+	width: 175px;
+}
+
+.dead {
+	opacity: 2;
+	cursor: default;
+}
+
+.game-over {
+	transform: rotate(90deg);
+}
+
+.hidden {
+	display: none;
 }

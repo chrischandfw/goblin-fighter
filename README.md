@@ -15,6 +15,27 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
+![wireframe](./assets/goblinWireframe.png "wireframe for goblin fighter rpg")
+
+#State
+- Player HP is 100
+- 2 default goblins hp are 10 each.
+- Defeated goblins count is set to 0.
+
+#HTML Setup
+- Destination div for player HP, each goblin name and hp, and defeated goblins
+- Buttons for each goblin
+	- When clicked, lower goblin hp (decrement)and lower player HP
+	- Increment Defeated Goblins
+	- Update DOM with new goblins, player, and defeated goblin state
+- New goblin form
+	Submit
+		- User input name of goblin to submit
+		- Make new goblin obj with user input.
+		- Add the obj to array of goblins in state
+- Update list to clear DOM, loop, render new DOM, and append element to HTML
+
+
 Additional considerations:
 - Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
 - Consider your data model. 
