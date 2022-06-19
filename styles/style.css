@@ -21,6 +21,11 @@ body {
 	text-align: center;
 }
 
+main {
+    height: 100%;
+    display: flex;
+}
+
 section {
     background-color: var(--color5);
     max-width: 80%;
@@ -33,11 +38,6 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
-}
-
-main {
-    height: 100%;
-    display: flex;
 }
 
 .player-stats {
