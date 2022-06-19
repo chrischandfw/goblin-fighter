@@ -33,39 +33,34 @@
 </style>
 
 <body>
+	<header>
+		<h2>Dispatch 4 Battle</h2>
+	</header>
     <main>
+
         <div class="player-stats">
 			<div class="defeated-goblins">
 				<p>Defeated <span id="defeated-flyingGoblin">0</span> Flying Goblins and <span id="defeated-goblinGhost">0</span> Ghost Goblins.</p>
 				<div class="defeated-list"></div>
 			</div>
-			<div class="retainer">
-				<select class="rets-dropdown" name="retainers" id="retainers">
-					<option value="none">RETAINERS</option>
-					<option value="hanuman">Hanuman</option>
-					<option value="naren">Naren</option>
-                    <option value="gomin">Gomin</option>
-                    <option value="anothai">Anothai</option>
-                    <option value="bounrak">Bounrak</option>
-                </select>
-				<div class="contain">
-					
-				</div>
-				<div id="error-message">
 
+			<section class="retainer">
+				<select class="rets-dropdown"></select>
+				<div class = "retainer-display">
+					<img src="/assets/anothai-rets.PNG" alt="hanuman-rets" id="retainer">
 				</div>
-				<ul id="list">
+				<div class="retainer-hp"></div>
+			</section>
 
-				</ul>
-			</div>
-		</div>
-		<div class="goblin-stats">
-			<div>
+			<section class="goblin">
+				<select class="rets-dropdown"></select>
+				<div class = "retainer-display">
+					<img src="/assets/flyingGoblin-mon.png" alt="goblinX-mon" id="monster">
+				</div>
 					<button id="battle-button">Battle</button>
-
-				<div class="goblins"></div>
-			</div>
-		</div>
+				<div id="display-goblins">
+				</div>
+			</section>
 
     </main>
     <footer>
